@@ -19,5 +19,5 @@ Civilization II's treasury on `base-treasury`, from OpenCiv2 (richardpenman/civ2
 - **Bankruptcy:** Civ2 resets the overdrawn treasury to 0 before adding the sale; `base-treasury` adds the sale to the
   overdrawn amount, so the treasury ends a few gold lower.
 - **$0 purchases:** nothing is offered once the box covers the cost; Civ2 offers a $0 purchase.
-- **The 30,000 gold cap** (`civ_turn_begin`) isn't applied.
+- **The 30,000 gold cap** (`civ_process_turn`) isn't applied.
 - **Spaceship parts and Capitalization** aren't in M2a.
