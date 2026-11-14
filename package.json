@@ -1,0 +1,58 @@
+{
+  "name": "@civ-clone/civ2-treasury",
+  "version": "0.1.0",
+  "description": "Civilization II's treasury: a Gold treasury for each player, buying with Civ2's prices, one sale a city a turn, and improvements sold when their upkeep can't be paid, on base-treasury.",
+  "main": "index.js",
+  "repository": "git@github.com:civ-clone/civ2-treasury.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "civ-clone": {
+    "conflicts": [
+      "@civ-clone/civ1-treasury"
+    ]
+  },
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "test:coverage": "c8 --all -x '**/*.ts' -x 'index.*' -x 'register*.*' ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^16.0.0",
+    "c8": "^7.14.0",
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.1.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@civ-clone/base-city-improvement-palace": "^0.1.0",
+    "@civ-clone/base-city-yield-city-improvement-maintenance-gold": "^0.1.2",
+    "@civ-clone/base-city-yield-gold": "^0.1.1",
+    "@civ-clone/base-treasury": "^0.1.2",
+    "@civ-clone/civ2-city-happiness": "github:civ-clone/civ2-city-happiness",
+    "@civ-clone/core-city": "^0.1.24",
+    "@civ-clone/core-city-build": "^0.1.22",
+    "@civ-clone/core-city-improvement": "^0.1.8",
+    "@civ-clone/core-engine": "^0.1.6",
+    "@civ-clone/core-game": "^0.1.17",
+    "@civ-clone/core-pending-effect": "^0.1.2",
+    "@civ-clone/core-player": "^0.1.10",
+    "@civ-clone/core-rule": "^0.1.9",
+    "@civ-clone/core-treasury": "^0.1.10",
+    "@civ-clone/core-turn-based-game": "^0.1.10",
+    "@civ-clone/core-unit": "^0.1.31",
+    "@civ-clone/core-wonder": "^0.1.5",
+    "@civ-clone/core-yield": "^0.1.6"
+  }
+}
